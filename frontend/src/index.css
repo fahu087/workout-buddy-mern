@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f1f1f1;
+  margin: 0;
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  color: #222222;
+}
+
+.pages {
+  max-width: 1400px;
+  padding: 24px;
+  margin: 0 auto;
+}
+
+/* Desktop 2-column layout (list + form) */
+.home {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.workout-details {
+  background: #ffffff;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.workout-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+
+.workout-details p {
+  margin: 2px 0;
+  font-size: 0.92em;
+  color: #555555;
+}
+
+.workout-details .time-ago {
+  margin-top: 6px;
+  font-size: 0.82em;
+  color: #777777;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 7px 8px;
+  border-radius: 50%;
+  border: none;
+  color: #333333;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+}
+
+.delete-btn:hover {
+  background: #fee2e2;
+  color: var(--error);
+}
+
+/* Right Section: Add a New Workout Form */
+.create h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.15rem;
+  color: #222222;
+}
+
+label,
+input {
+  display: block;
+}
+
+label {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #333333;
+}
+
+input {
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 18px;
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+input.error {
+  border: 1px solid var(--error);
+}
+
+form button {
+  background: var(--primary);
+  border: 0;
+  color: #ffffff;
+  padding: 10px 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+form button:hover {
+  opacity: 0.92;
+}
+
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 18px 0;
+  font-size: 0.9rem;
+}
+
+.empty-msg {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 6px;
+  color: #666666;
+}
+
+/* Mobile stacked layout */
+@media (max-width: 820px) {
+  .home {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .pages {
+    padding: 16px;
+  }
+}
